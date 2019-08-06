@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title></title>
+      <style>
+        .content { text-align:center; }
+        .button { font-size: 2em; }
+      </style>
+    </head>
+    <body>
+      <div class="content">
+        <button class="button" onclick="showAttachmentsView();">Show Attachments</button>
+      </div>
+      <script type="text/javascript">
+        function showAttachmentsView() {
+          let parameters = {"fileTypes" : ["photo", "video"], "uploadURL" : "test.ru"}
+          window.yandex.attachments.showAttachmentsView(parameters, (result) => {
+            alert(result["type"])
+          });
+        };
+      </script>
+    </body>
+</html>
