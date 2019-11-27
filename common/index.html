@@ -9,7 +9,24 @@
     </head>
     <body>
       <div class="content">
-        <button type="button" onclick="window.close();">window.close()</button>
+        <button class="button" onclick="openWindow();">Open</button>
+        <button class="button" onclick="closeWindow();">Close</button>
+        <button class="button" onclick="closeCurrentWindow();">Close current</button>
       </div>
+      <script>
+        var openedWindow;
+
+        function openWindow() {
+          openedWindow = window.open("index.html", "test", "width=200, height=100");
+        }
+
+        function closeWindow() {
+          openedWindow.close();
+        }
+
+        function closeCurrentWindow() {
+          window.close();
+        }
+      </script>
     </body>
 </html>
